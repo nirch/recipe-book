@@ -46,12 +46,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li ng-show="isLoggedIn"><a href="#">Recipes</a></li>
-                <li ng-show="isLoggedIn"><a href="#">New Recipe</a></li>
+                <li ng-show="isLoggedIn()"><a href="#">Recipes</a></li>
+                <li ng-show="isLoggedIn()"><a href="#">New Recipe</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li ng-hide="isLoggedIn"><a href="#">Login</a></li>
-                <li ng-show="isLoggedIn"><a href="#">Logout</a></li>
+                <li ng-hide="isLoggedIn()"><a href="#">Login</a></li>
+                <li ng-show="isLoggedIn()"><a href="#">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
