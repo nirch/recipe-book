@@ -1,6 +1,6 @@
 var recipeApp = angular.module("RecipeApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
-recipeApp.controller("TestCtrl", function ($scope, User, activeUser, Recipe) {
+recipeApp.controller("TestCtrl", function ($scope, User, activeUser, Recipe, recipes) {
     var plainUser = {
         "email": "nir@nir.com",
         "password": "nir123",
@@ -32,4 +32,9 @@ recipeApp.controller("TestCtrl", function ($scope, User, activeUser, Recipe) {
     var recipe = new Recipe(plainRecipe);
     console.log(JSON.stringify(recipe));
 
+    recipes.add(plainRecipe);
+    recipes.add(plainRecipe);
+    console.log(JSON.stringify(recipes.getAll()));
+    recipes.removeAll();
+    console.log(JSON.stringify(recipes.getAll()));
 });
