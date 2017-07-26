@@ -6,6 +6,11 @@ recipeApp.config(function ($routeProvider) {
             templateUrl: "app/home/home.html",
             controller: "HomeCtrl"
         })
+        .when("/recipes", {
+            templateUrl: "app/recipe/recipeGallery.html",
+            controller: "RecipeGalleryCtrl"
+        })
+
 });
 
 
