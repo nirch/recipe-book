@@ -23,12 +23,13 @@
     <script src="app/app.js"></script>
     <script src="app/model/user.js"></script>
     <script src="app/model/recipe.js"></script>
+    <script src="app/shared/navCtrl.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body ng-controller="TestCtrl">
     
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" ng-controller="NavCtrl">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -43,12 +44,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Recipes</a></li>
-                <li><a href="#">New Recipe</a></li>
+                <li ng-show="isLoggedIn"><a href="#">Recipes</a></li>
+                <li ng-show="isLoggedIn"><a href="#">New Recipe</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Logout</a></li>
+                <li ng-hide="isLoggedIn"><a href="#">Login</a></li>
+                <li ng-show="isLoggedIn"><a href="#">Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
