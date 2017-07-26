@@ -12,7 +12,7 @@ recipeApp.factory("User", function(){
 });
 
 // Service that manges the active user
-recipeApp.factory("activeUser", function(){
+recipeApp.factory("activeUser", function(User){
     var user = null;
 
     var isLoggedIn = function() {

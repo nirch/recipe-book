@@ -10,6 +10,10 @@ recipeApp.config(function ($routeProvider) {
             templateUrl: "app/recipe/recipeGallery.html",
             controller: "RecipeGalleryCtrl"
         })
+        .when("/recipes/:recipeIndex", {
+            templateUrl: "app/recipe/recipeDetails.html",
+            controller: "RecipeDetailsCtrl"
+        })
 
 });
 
