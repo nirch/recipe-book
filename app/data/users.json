@@ -4,6 +4,6 @@
         "password": "nir123",
         "firstName":"Nir",
         "lastName": "Channes",
-        "data":"nir-recipes.json"
+        "data":"app/data/nir-recipes.json"
     }
 ]

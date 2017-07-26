@@ -7,4 +7,10 @@ recipeApp.controller("RecipeGalleryCtrl", function ($scope, $http, $location, ac
     }
 
     $scope.greetName = activeUser.get().firstName;
+
+    $scope.recipeArr = [];
+    $http.get(activeUser.get().data).then(function(response) {
+        recipes.load(response.data);
+        $scope.recipeArr = recipes.getAll();
+    });
 });
