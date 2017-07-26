@@ -13,4 +13,8 @@ recipeApp.controller("RecipeGalleryCtrl", function ($scope, $http, $location, ac
         recipes.load(response.data);
         $scope.recipeArr = recipes.getAll();
     });
+
+    $scope.openDetails = function(index) {
+        $location.path("/recipes/" + index)
+    }
 });

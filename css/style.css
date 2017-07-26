@@ -10,3 +10,7 @@
     font-family: "Pacifico";
     font-size: 4em;
 }
+
+.recipe-item {
+    cursor: pointer;
+}

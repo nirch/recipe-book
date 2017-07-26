@@ -6,9 +6,9 @@
     </div>
 
     
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="recipe in recipeArr">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="recipe in recipeArr" >
         
-        <div class="well">
+        <div class="well recipe-item" ng-click="openDetails($index)">
             
             <img ng-src="{{recipe.imageUrl}}" class="img-responsive" alt="Image">
             <h3>{{recipe.name}}</h3>
