@@ -1,5 +1,19 @@
 var recipeApp = angular.module("RecipeApp", ["ngRoute", "ngAnimate", "ui.bootstrap"]);
 
+recipeApp.config(function ($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl: "app/home/home.html",
+            controller: "HomeCtrl"
+        })
+});
+
+
+
+
+
+
+// TODO: Delete this TESTINGGGGGGGGGG
 recipeApp.controller("TestCtrl", function ($scope, User, activeUser, Recipe, recipes) {
     var plainUser = {
         "email": "nir@nir.com",
