@@ -8,11 +8,16 @@ recipeApp.controller("RecipeGalleryCtrl", function ($scope, $http, $location, ac
 
     $scope.greetName = activeUser.get().firstName;
 
-    $scope.recipeArr = [];
-    $http.get(activeUser.get().data).then(function(response) {
-        recipes.load(response.data);
+    // Making sure that we are only loading once
+    if (recipes.getAll().length === 0) {
+        $scope.recipeArr = [];
+        $http.get(activeUser.get().data).then(function(response) {
+            recipes.load(response.data);
+            $scope.recipeArr = recipes.getAll();
+        });
+    } else {
         $scope.recipeArr = recipes.getAll();
-    });
+    }
 
     $scope.openDetails = function(index) {
         $location.path("/recipes/" + index)
