@@ -28,6 +28,7 @@
     <script src="app/login/loginCtrl.js"></script>
     <script src="app/recipe/recipeGalleryCtrl.js"></script>
     <script src="app/recipe/recipeDetailsCtrl.js"></script>
+    <script src="app/recipe/newRecipeCtrl.js"></script>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -48,8 +49,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li ng-show="isLoggedIn()"><a href="#">Recipes</a></li>
-                <li ng-show="isLoggedIn()"><a href="#">New Recipe</a></li>
+                <li ng-show="isLoggedIn()"><a href="#!/recipes">Recipes</a></li>
+                <li ng-show="isLoggedIn()"><a href="#!/new">New Recipe</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li ng-hide="isLoggedIn()"><a href="#">Login</a></li>

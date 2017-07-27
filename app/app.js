@@ -13,6 +13,9 @@ recipeApp.config(function ($routeProvider) {
         .when("/recipes/:recipeIndex", {
             templateUrl: "app/recipe/recipeDetails.html",
             controller: "RecipeDetailsCtrl"
+        }).when("/new", {
+            templateUrl: "app/recipe/newRecipe.html",
+            controller: "NewRecipeCtrl"            
         })
 
 });
